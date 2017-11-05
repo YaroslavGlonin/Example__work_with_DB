@@ -1,1 +1,1 @@
-# Example__work_with_DB
+In this project used the library PDFReader
