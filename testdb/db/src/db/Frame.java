@@ -38,7 +38,7 @@ import javax.swing.table.TableColumn;
 public class Frame {
     public static void main(String[] args) 
     {
-    	render_frame(args[0],args[1],args[2];args[3],args[4]);
+    	render_frame(args[0],args[1],args[2],args[3],args[4]);
     }
     static void render_frame(String arg0,String arg1,String arg2,String arg3,String arg4)
     {
