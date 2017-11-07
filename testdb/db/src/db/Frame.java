@@ -38,13 +38,13 @@ import javax.swing.table.TableColumn;
 public class Frame {
     public static void main(String[] args) 
     {
-    	render_frame();
+    	render_frame(args[0],args[1],args[2];args[3],args[4]);
     }
-    static void render_frame()
+    static void render_frame(String arg0,String arg1,String arg2,String arg3,String arg4)
     {
     	String[] items = {"PZN","UER","RGN","IND","NNP","ADR","RKC","NAMEP","NEWNUM","NEWKS","TELEF","REGN","OKPO","DATEDEL","KSNP","R_CLOSE"};
   	  	final JFrame frame = new JFrame("Demo");
-  	  	final ModelData md = new ModelData();
+  	  	final ModelData md = new ModelData(arg0,arg1,arg2,arg3,arg4);
   	  	final JTable table = new JTable(md);
   	  	final JPanel btnPnl = new JPanel(new BorderLayout());
         final JPanel topBtnPnl = new JPanel(new FlowLayout(FlowLayout.TRAILING));
