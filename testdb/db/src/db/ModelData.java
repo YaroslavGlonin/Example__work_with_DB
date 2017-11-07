@@ -103,11 +103,11 @@ class ModelData extends AbstractTableModel {
     String[] suer=null;
     String[] stnp=null;
     String[] spzn=null;
-    ModelData() {
+    ModelData(String arg0,String arg1,String arg2,String arg3,String arg4) {
     	DBFReader readerbnk = null;
     	
 		try {
-			readerbnk = new DBFReader(new FileInputStream("C:/Users/ENG/Desktop/DevTest/tk_spr3193/BNKDEL.DBF"));
+			readerbnk = new DBFReader(new FileInputStream(arg0));
 			readerbnk.setCharactersetName("Cp866");
 			int numberOfFields = readerbnk.getFieldCount();
 			for (int i = 0; i < numberOfFields; i++) 
@@ -116,10 +116,10 @@ class ModelData extends AbstractTableModel {
 				//System.out.println(field.getName());
 			}
 			DBFRow row;
-			ReplacerString pzn= new ReplacerString("C:/Users/ENG/Desktop/DevTest/tk_spr3193/PZN.DBF","PZN","NAME");
-			ReplacerString tnp= new ReplacerString("C:/Users/ENG/Desktop/DevTest/tk_spr3193/TNP.DBF","TNP","FULLNAME");
-			ReplacerString uer= new ReplacerString("C:/Users/ENG/Desktop/DevTest/tk_spr3193/UER.DBF","UER","UERNAME");
-			ReplacerString rgn= new ReplacerString("C:/Users/ENG/Desktop/DevTest/tk_spr3193/REG.DBF","RGN","NAME");
+			ReplacerString pzn= new ReplacerString(arg1,"PZN","NAME");
+			ReplacerString tnp= new ReplacerString(arg2,"TNP","FULLNAME");
+			ReplacerString uer= new ReplacerString(arg3,"UER","UERNAME");
+			ReplacerString rgn= new ReplacerString(arg4,"RGN","NAME");
 			srgn= rgn.retcombobox();
 			suer= uer.retcombobox();
 			stnp= tnp.retcombobox();
